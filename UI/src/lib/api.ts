@@ -1,5 +1,5 @@
 const BASE_URL = import.meta.env.PROD 
-  ? (import.meta.env.VITE_API_URL || 'https://dynamic-shree-construction1.onrender.com/api')
+  ? (import.meta.env.VITE_API_URL || '/api')
   : '/api';
 
 // ─── Static fallback list (used only if DB is empty) ──────────────
