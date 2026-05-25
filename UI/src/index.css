@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 200 25% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 10% 95%;
+    --secondary-foreground: 220 15% 25%;
+
+    --muted: 210 10% 96%;
+    --muted-foreground: 215 10% 50%;
+
+    --accent: 200 30% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 200 25% 45%;
+
+    --radius: 0.75rem;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 200 35% 55%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 200 40% 55%;
+    --accent-foreground: 220 20% 8%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 200 35% 55%;
+
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .watermark-logo {
+    @apply fixed inset-0 pointer-events-none z-0 flex items-center justify-center;
+  }
+
+  .watermark-logo img {
+    @apply w-[60vw] max-w-[600px] opacity-[0.04] dark:opacity-[0.06];
+  }
+
+  .project-card {
+    @apply relative overflow-hidden rounded-xl bg-card border border-border transition-all duration-500 cursor-pointer;
+    @apply hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary/30;
+  }
+
+  .project-card-image {
+    @apply aspect-[4/3] w-full object-cover transition-transform duration-700;
+  }
+
+  .project-card:hover .project-card-image {
+    @apply scale-110;
+  }
+
+  .project-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent opacity-60;
+    @apply transition-opacity duration-300;
+  }
+
+  .project-card:hover .project-card-overlay {
+    @apply opacity-80;
+  }
+
+  .project-card-content {
+    @apply absolute bottom-0 left-0 right-0 p-6 text-background transform translate-y-2;
+    @apply transition-transform duration-300;
+  }
+
+  .project-card:hover .project-card-content {
+    @apply translate-y-0;
+  }
+
+  .video-indicator {
+    @apply absolute top-4 right-4 w-12 h-12 rounded-full bg-primary/90 flex items-center justify-center;
+    @apply text-primary-foreground shadow-lg backdrop-blur-sm;
+  }
+
+  .theme-toggle {
+    @apply w-10 h-10 rounded-full border-2 border-foreground/20 flex items-center justify-center;
+    @apply transition-all duration-300 hover:border-primary hover:bg-primary/10;
+  }
+
+  .admin-panel {
+    @apply fixed inset-0 z-50 bg-background/95 backdrop-blur-xl;
+  }
+
+  .btn-hero {
+    @apply px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg;
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:scale-105;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

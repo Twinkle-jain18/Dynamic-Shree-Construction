@@ -1,0 +1,142 @@
+[
+  {
+    "id": "building-construction",
+    "title": "Building Construction",
+    "shortDescription": "Comprehensive building construction services from foundation to finish. We bring exceptional quality, robust materials, and unmatched expertise.",
+    "longDescription": "We provide end-to-end building construction tailored exactly to your needs from foundation to finish. Our interior and exterior divisions ensure every aspect is handled with immense expertise, deploying robust materials and precise engineering standards to stand the test of time.",
+    "image": "/assets/services/building.jpg",
+    "isSpecial": true,
+    "materials": [
+      { "name": "Cement", "description": "High-grade structural bond", "icon": "package" },
+      { "name": "Steel", "description": "Robust TMT reinforcement", "icon": "layers" },
+      { "name": "Bricks", "description": "Durable clay masonry", "icon": "box" },
+      { "name": "Sand", "description": "Fine-graded river sand", "icon": "droplets" },
+      { "name": "Concrete", "description": "High-strength premix", "icon": "component" }
+    ],
+    "interior": [
+      { "type": "image", "src": "/assets/services/interior/1000090799.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090800.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090801.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090803.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090807.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090808.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090812.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090813.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090814.jpg.jpeg" },
+      { "type": "image", "src": "/assets/services/interior/1000090815.jpg.jpeg" },
+      { "type": "image", "src": "/assets/services/interior/1000090816.jpg.jpeg" },
+      { "type": "image", "src": "/assets/services/interior/1000090817.jpg.jpeg" },
+      { "type": "image", "src": "/assets/services/interior/1000090820.jpg.jpeg" },
+      { "type": "image", "src": "/assets/services/interior/1000090821.jpg.jpeg" },
+      { "type": "image", "src": "/assets/services/interior/1000090823.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090825.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090826.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090830.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090835.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090836.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090838.png" },
+      { "type": "image", "src": "/assets/services/interior/1000090845.png" }
+    ],
+    "exterior": [
+      { "type": "image", "src": "/assets/services/exterior/1000090773.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090774.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090775.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090776.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090777.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090778.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090779.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090780.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090781.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090782.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090783.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090784.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090785.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090786.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090787.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090788.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090789.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090790.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090791.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090792.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090793.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090794.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090795.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090796.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000097893.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000098005.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000098011.jpg" }
+    ]
+  },
+  {
+    "id": "architectural-planning",
+    "title": "Architectural Planning",
+    "shortDescription": "Expert architectural planning focusing on optimizing space, aesthetics, and functionality for your projects.",
+    "longDescription": "Our elite architectural planning team focuses heavily on maximizing utility, natural light, aesthetics, and environmental synergy to deliver a robust blueprint for your vision. We work closely with clients to truly translate dreams into stunning architectural realities.",
+    "image": "/assets/services/architectural.jpg",
+    "materials": [
+      { "name": "Floor Plans", "description": "Precise scale drawings", "icon": "file-text" },
+      { "name": "CAD Drawings", "description": "Computerized digital blueprints", "icon": "monitor" },
+      { "name": "3D Models", "description": "Immersive volumetric shapes", "icon": "box" },
+      { "name": "Layout Sheets", "description": "Site and land allocation", "icon": "map" }
+    ],
+    "images": [
+      { "type": "image", "src": "/assets/services/exterior/1000090783.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090784.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090786.jpg" }
+    ]
+  },
+  {
+    "id": "structural-design",
+    "title": "Structural Design",
+    "shortDescription": "Robust structural design services that guarantee safety and compliance with the highest industry standards.",
+    "longDescription": "We deliver comprehensive structural models and designs to guarantee absolute safety, longevity, and structural integrity across all environmental conditions. Our designs are mathematically optimized for both core strength and material efficiency without compromising the architectural vision.",
+    "image": "/assets/services/structural_design.jpg",
+    "materials": [
+      { "name": "Reinforcement Steel", "description": "High-tensile stress bar", "icon": "layers" },
+      { "name": "RCC", "description": "Steel-concrete composite", "icon": "component" },
+      { "name": "Load Calculations", "description": "Dynamic structural analysis", "icon": "calculator" },
+      { "name": "Structural Frames", "description": "Primary load-bearing skull", "icon": "maximize" }
+    ],
+    "images": [
+      { "type": "image", "src": "/assets/services/exterior/1000090787.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090788.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090789.jpg" }
+    ]
+  },
+  {
+    "id": "elevation-design",
+    "title": "2D/3D Elevation Design",
+    "shortDescription": "Detailed 2D and 3D elevation designs to help you visualize your project before construction begins.",
+    "longDescription": "Visualize your property perfectly before ground breaks. We offer stunningly realistic 2D and immersive 3D elevation designs for all construction types, enabling you to explore structural finishes, lighting, colors, and textures digitally in real-time.",
+    "image": "/assets/services/elevation.jpg",
+    "materials": [
+      { "name": "Textures", "description": "Realistic surface finishes", "icon": "palette" },
+      { "name": "Lighting Models", "description": "Photorealistic light paths", "icon": "sun" },
+      { "name": "3D Renders", "description": "High-fidelity digital views", "icon": "image" },
+      { "name": "Color Palettes", "description": "Harmonious paint schemes", "icon": "swatch" }
+    ],
+    "images": [
+      { "type": "image", "src": "/assets/services/exterior/1000090790.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090791.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090792.jpg" }
+    ]
+  },
+  {
+    "id": "building-renovation",
+    "title": "Building Renovation",
+    "shortDescription": "Professional renovation services to modernize and enhance existing structures with minimal disruption.",
+    "longDescription": "Breathe brand new life into aging structures. We meticulously handle structural retrofitting, deep repairs, and modern aesthetic upgrades to completely transform older buildings into contemporary, high-performing masterpieces without completely tearing down histories.",
+    "image": "/assets/services/renovation.jpg",
+    "materials": [
+      { "name": "Tiles", "description": "Premium floor and wall skin", "icon": "grid" },
+      { "name": "Paint", "description": "Protective aesthetic coat", "icon": "swatch" },
+      { "name": "Wood", "description": "Teak and natural finishes", "icon": "feather" },
+      { "name": "Fixtures", "description": "Modern hardware components", "icon": "settings" }
+    ],
+    "images": [
+      { "type": "image", "src": "/assets/services/exterior/1000090793.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090794.jpg" },
+      { "type": "image", "src": "/assets/services/exterior/1000090795.jpg" }
+    ]
+  }
+]
