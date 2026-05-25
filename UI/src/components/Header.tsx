@@ -4,6 +4,8 @@ import { useRef, useState, useCallback, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { CallActionModal } from './CallActionModal';
 
+import logo from '../../assets/logo.jpg';
+
 export function Header() {
   const { isDark, toggleTheme } = useTheme();
   const navigate = useNavigate();
@@ -76,7 +78,7 @@ export function Header() {
             className="relative rounded-full focus:outline-none select-none overflow-hidden h-10 w-10 md:h-12 md:w-12 border-2 border-primary/20 hover:border-primary transition-colors"
           >
             <img
-              src="../../assets/logo.jpg"
+              src={logo}
               alt="Shree Constructions"
               className="h-full w-full object-contain"
             />

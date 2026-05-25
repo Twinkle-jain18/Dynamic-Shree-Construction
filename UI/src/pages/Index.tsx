@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { WatermarkLogo } from '@/components/WatermarkLogo';
+import logo from '../../assets/logo.jpg';
 import { Services } from '@/components/Services';
 import { Stats } from '@/components/Stats';
 import { VideoSection } from '@/components/VideoSection';
@@ -67,7 +68,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-center md:text-left">
                 <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
-                  <img src="../../assets/logo.jpg" alt="Logo" className="h-10 w-10 rounded-full grayscale opacity-50" />
+                  <img src={logo} alt="Logo" className="h-10 w-10 rounded-full grayscale opacity-50" />
                   <span className="font-display font-bold text-lg tracking-tight text-foreground/80">Shree Constructions</span>
                 </div>
                 <p className="font-body text-[10px] text-muted-foreground uppercase tracking-[0.2em]">
