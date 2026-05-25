@@ -10,7 +10,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:3000', 'http://localhost:5173', 'http://127.0.0.1:8080'],
+  origin: (origin, callback) => {
+    // Dynamic origin matching to support local development and any deployed frontend domain
+    callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());

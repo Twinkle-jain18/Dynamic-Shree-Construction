@@ -1,4 +1,6 @@
-const BASE_URL = '/api';
+const BASE_URL = import.meta.env.PROD 
+  ? (import.meta.env.VITE_API_URL || 'https://dynamic-shree-construction1.onrender.com/api')
+  : '/api';
 
 // ─── Static fallback list (used only if DB is empty) ──────────────
 export const DEFAULT_SERVICES = [
