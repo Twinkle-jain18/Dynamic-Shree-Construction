@@ -49,21 +49,38 @@ router.post('/register', require('../middleware/auth'), async (req, res) => {
   const { username, password, email } = req.body;
 
   try {
-    let admin = await Admin.findOne({ username });
-    if (admin) {
-      return res.status(400).json({ message: 'Admin already exists' });
+    let existingUsername = await Admin.findOne({ username });
+    if (existingUsername) {
+      return res.status(400).json({ message: 'An admin with this username already exists' });
+    }
+
+    if (email && email.trim() !== '') {
+      const trimmedEmail = email.trim().toLowerCase();
+      let existingEmail = await Admin.findOne({ email: trimmedEmail });
+      if (existingEmail) {
+        return res.status(400).json({ message: 'An admin with this email address already exists' });
+      }
     }
 
     const adminData = { username, password };
     if (email && email.trim() !== '') {
-      adminData.email = email.trim();
+      adminData.email = email.trim().toLowerCase();
     }
     
-    admin = new Admin(adminData);
-    await admin.save();
+    const newAdmin = new Admin(adminData);
+    await newAdmin.save();
 
     res.json({ message: 'New admin account created successfully' });
   } catch (err) {
+    if (err.code === 11000) {
+      if (err.keyPattern && err.keyPattern.email) {
+        return res.status(400).json({ message: 'An admin with this email address already exists' });
+      }
+      if (err.keyPattern && err.keyPattern.username) {
+        return res.status(400).json({ message: 'An admin with this username already exists' });
+      }
+      return res.status(400).json({ message: 'An admin account with these credentials already exists' });
+    }
     res.status(500).json({ message: 'Server error: ' + err.message });
   }
 });
@@ -99,7 +116,13 @@ router.patch('/update-profile', require('../middleware/auth'), async (req, res) 
     if (!admin) return res.status(404).json({ message: 'Admin not found' });
 
     if (email && email.trim() !== '') {
-      admin.email = email.trim();
+      const trimmedEmail = email.trim().toLowerCase();
+      // Check if another admin account is using this email
+      const existingEmail = await Admin.findOne({ email: trimmedEmail, _id: { $ne: admin._id } });
+      if (existingEmail) {
+        return res.status(400).json({ message: 'This email address is already registered to another admin account' });
+      }
+      admin.email = trimmedEmail;
     } else {
       admin.email = undefined;
     }
@@ -107,6 +130,9 @@ router.patch('/update-profile', require('../middleware/auth'), async (req, res) 
     await admin.save();
     res.json({ message: 'Admin profile updated successfully', email: admin.email });
   } catch (err) {
+    if (err.code === 11000) {
+      return res.status(400).json({ message: 'This email address is already registered to another admin account' });
+    }
     res.status(500).json({ message: 'Server error: ' + err.message });
   }
 });
