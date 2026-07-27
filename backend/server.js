@@ -31,6 +31,10 @@ const inquiryRoutes = require('./routes/inquiries');
 const statsRoutes = require('./routes/stats');
 const reviewRoutes = require('./routes/reviews');
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Shree Constructions Backend API is online and running!' });
+});
+
 // Mount Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
