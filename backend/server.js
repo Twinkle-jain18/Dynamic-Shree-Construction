@@ -1,4 +1,7 @@
 require('dotenv').config();
+// Override DNS to use Google Public DNS — fixes Atlas SRV resolution on restricted networks
+require('dns').setDefaultResultOrder('ipv4first');
+require('dns').setServers(['8.8.8.8', '8.8.4.4', '1.1.1.1']);
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
